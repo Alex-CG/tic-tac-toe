@@ -37,3 +37,7 @@ body {
 .game-info {
   margin-left: 20px;
 }
+
+.current-position {
+  font-size: 13px;
+}
