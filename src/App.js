@@ -38,11 +38,8 @@ function Board({ xIsNext, squares, onPlay }) {
   for (let i = 0; i < 3; i++) {
     const cells = [];
     for (let j = 0; j < 3; j++) {
-      const renderCell = (idx) => {
-        return <Square key={j} value={squares[idx]} onSquareClick={() => handleClick(idx)} />;
-      };
-      cells.push(renderCell(idx));
-      idx++;
+      const renderCell = (idx) => <Square key={j} value={squares[idx]} onSquareClick={() => handleClick(idx)} />;
+      cells.push(renderCell(idx++));
     }
     rows.push(<div key={i} className="board-row">{cells}</div>);
   }
